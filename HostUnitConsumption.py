@@ -3,16 +3,12 @@ import requests
 import json
 import csv
 
-#--------------- Variables ---------------|
-
-
+#|--------------- Variables ---------------|
 #Enter your environment id, environment token and entity ID
-environmentID = 'phz84157'
-environmentToken= 'EDWj-FWcTR6ti248v5igx'
-entityID= ''
+#Environment ID for DT SaaS is https://<environmentID>.live.dynatrace.com
 
-#Initialize variables
-counter = 0
+environmentID = '<insert Environment ID here>'
+environmentToken= '<Insert Environment Token Here>'
 
 #REST API query to get host information
 response = requests.get('https://' + environmentID + '.live.dynatrace.com/api/v1/entity/infrastructure/hosts?' + 'api-token=' + environmentToken)
